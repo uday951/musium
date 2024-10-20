@@ -1,17 +1,20 @@
 
 
 import React from 'react'
-import { auth } from '../auth'
+
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import AdminNavbar from '../components/AdminNavbar'
 import AddProduct from '../components/AddProduct'
-
+import { authOptions } from '../auth'
+import { getServerSession } from 'next-auth';
 
 
 const AdminPage = async() => {
 
-  const session = await auth()
+
+  const session = await getServerSession(authOptions);
+
 
   if(!session){
     redirect("/login")

@@ -1,5 +1,14 @@
 {
-  "node": {},
+  "node": {
+    "214b46be412f0ea8d83ff6a4a0daa01b67f21d58": {
+      "workers": {
+        "app/(user)/detail/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CUdayk%5C%5CDesktop%5C%5CNew%20folder%20(2)%5C%5CNext_Resort_Project%5C%5Csrc%5C%5Capp%5C%5CserverActions%5C%5CbookingAction.js%22%2C%5B%22bookingAction%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/(user)/detail/[id]/page": "action-browser"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "+9dUOg8MoAtlNFQfoBlRCDWdzFN73SbNGdCMIwU15yU="
+  "encryptionKey": "R3i6EcnUWxRenYTBQmac8IW+Sh4BynE+5Nji01ZzD2U="
 }

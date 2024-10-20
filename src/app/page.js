@@ -1,49 +1,39 @@
+import React from 'react';
+import DBConnection from './utils/config/db';
+import { redirect } from 'next/navigation';
+import UserNavigation from './components/UserNavigation';
+import AdminPage from './admin/page';
+import ProductCollection from './components/ProductCollection';
+import { getServerSession } from 'next-auth/next';  // Correct import
+import { authOptions } from './auth';  // Your auth options
 
-import React from 'react'
-import DBConnection from './utils/config/db'
-import { auth } from './auth'
-import { redirect } from 'next/navigation'
-import UserNavigation from './components/UserNavigation'
-import AdminPage from './admin/page'
-import ProductCollection from './components/ProductCollection'
+const HomePage = async () => {
 
-const HomePage = async() => {
+  const session = await getServerSession(authOptions);  // Correct function for App Router
 
-  const session = await auth()
+  await DBConnection();
 
-  await DBConnection()
- 
-  if(!session){
-    redirect("/login")
+  if (!session) {
+    redirect("/login");
   }
 
+  console.log("role check:", session.user?.role);
+  console.log("username check:", session.user?.name);
 
-
-  // console.log('user check: ', userName)
-
-  console.log("role check;:", session.role)
-
-  console.log("username chekc:", session.username)
-
-  const userName = session.username
-
-
-
+  const userName = session.user?.name;
 
   return (
     <div>
-      {session.role === 'user' &&  (
+      {session.role === 'user' && (
         <>
-        <UserNavigation userName = {userName}/>
-        <img src='banner.jpg' alt='banner' className='bannerImage'/>
-        <ProductCollection />
+          <UserNavigation userName={userName} />
+          <img src='banner.jpg' alt='banner' className='bannerImage' />
+          <ProductCollection />
         </>
-      ) }
-      {session.role === 'admin' &&
-        <AdminPage /> 
-    }
+      )}
+      {session.role === 'admin' && <AdminPage />}
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

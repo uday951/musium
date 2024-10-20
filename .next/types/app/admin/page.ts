@@ -1,4 +1,4 @@
-// File: C:\Users\dell\Desktop\Next_Resort\resort_booking\src\app\admin\page.jsx
+// File: C:\Users\Udayk\Desktop\New folder (2)\Next_Resort_Project\src\app\admin\page.jsx
 import * as entry from '../../../../src/app/admin/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -12,7 +12,7 @@ const UserInvoice = ({ userId }) => {
 
   const invoiceHandler = async () => {
     try {
-      const response = await fetch(`https://next-resort-project.vercel.app/api/users/${userId}`);
+      const response = await fetch(`http://localhost:3000/api/users/${userId}`);
       const newData = await response.json();
       console.log("newData:", newData);
 
@@ -59,7 +59,7 @@ const UserInvoice = ({ userId }) => {
     }
   
     try {
-      const response = await fetch(`https://next-resort-project.vercel.app/api/users/${bookingId}`, {
+      const response = await fetch(`http://localhost:3000/api/users/${bookingId}`, {
         method: 'DELETE',
       });
   

@@ -1,5 +1,8 @@
 {
+  "/(user)/detail/[id]/page": "app/(user)/detail/[id]/page.js",
   "/page": "app/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/(user)/invoice/page": "app/(user)/invoice/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/users/[id]/route": "app/api/users/[id]/route.js",
+  "/api/admin/add-product/route": "app/api/admin/add-product/route.js"
 }

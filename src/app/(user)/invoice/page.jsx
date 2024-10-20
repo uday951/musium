@@ -1,14 +1,15 @@
 
 
-import { auth } from '@/app/auth'
+
+import { authOptions } from '@/app/auth'
 import UserInvoice from '@/app/components/UserInvoice'
 import UserNavigation from '@/app/components/UserNavigation'
 import UserModel from '@/app/utils/models/User'
+import { getServerSession } from 'next-auth'
 import React from 'react'
 
 const InvoicePage = async() => {
-
-  const session = await auth()
+  const session = await getServerSession(authOptions);
 
   const email = session.email
 

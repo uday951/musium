@@ -6,7 +6,7 @@ import { registerAction } from '../serverActions/registerAction';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Circles } from 'react-loader-spinner'
+
 
 const RegisterForm = () => {
     const [username, setUsername] = useState("");
@@ -56,15 +56,6 @@ const RegisterForm = () => {
       {
         loading? (
           <>
-           <Circles
-  height="80"
-  width="80"
-  color="white"
-  ariaLabel="circles-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-  />
           </>
         ):(<>
          <form onSubmit={registerHandler} className='formSection' >

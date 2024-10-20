@@ -1,2 +1,6 @@
+// src/app/api/auth/[...nextauth]/route.js
+import NextAuth from '@/app/auth';  // Correctly import the default export
 
-export {GET,POST} from '@/app/auth'
+const handler = NextAuth;
+
+export { handler as GET, handler as POST };
