@@ -25,11 +25,17 @@ const UserNavigation = ({userName}) => {
       {userName}
       </span>
        </p>
+       <Link href="/chatbot" className='link'>
+    <div className="logout">
+        chatbot
+    </div>
+    </Link>
     <Link href="/api/auth/signout" className='link'>
     <div className="logout">
         Logout
     </div>
     </Link>
+    
 </div>
   )
 }

@@ -1,8 +1,10 @@
 {
-  "/(user)/detail/[id]/page": "app/(user)/detail/[id]/page.js",
   "/page": "app/page.js",
-  "/(user)/invoice/page": "app/(user)/invoice/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/users/[id]/route": "app/api/users/[id]/route.js",
-  "/api/admin/add-product/route": "app/api/admin/add-product/route.js"
+  "/(user)/book/page": "app/(user)/book/page.js",
+  "/chatbot/page": "app/chatbot/page.js",
+  "/(user)/botlogin/page": "app/(user)/botlogin/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/admin/add-product/route": "app/api/admin/add-product/route.js",
+  "/(user)/detail/[id]/page": "app/(user)/detail/[id]/page.js",
+  "/api/admin/product/[id]/route": "app/api/admin/product/[id]/route.js"
 }

@@ -30,7 +30,7 @@ const ProductCollection = () => {
 
   return (
     <div className="productSection">
-      <h1 align="center">Select your Stay</h1>
+      <h1 align="center">Select Your Musium</h1>
       {collections ? (
         collections.map((item) => {
           return (

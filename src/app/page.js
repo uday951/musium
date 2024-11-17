@@ -6,6 +6,7 @@ import AdminPage from './admin/page';
 import ProductCollection from './components/ProductCollection';
 import { getServerSession } from 'next-auth/next';  // Correct import
 import { authOptions } from './auth';  // Your auth options
+import ChatBotPage from './components/chatbotpage';
 
 const HomePage = async () => {
 
@@ -26,9 +27,7 @@ const HomePage = async () => {
     <div>
       {session.role === 'user' && (
         <>
-          <UserNavigation userName={userName} />
-          <img src='banner.jpg' alt='banner' className='bannerImage' />
-          <ProductCollection />
+          <ChatBotPage/>
         </>
       )}
       {session.role === 'admin' && <AdminPage />}

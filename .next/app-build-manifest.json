@@ -12,16 +12,27 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/(user)/book/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(user)/book/page.js"
+    ],
+    "/chatbot/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/chatbot/page.css",
+      "static/chunks/app/chatbot/page.js"
+    ],
+    "/(user)/botlogin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(user)/botlogin/page.js"
+    ],
     "/(user)/detail/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/(user)/detail/[id]/page.css",
       "static/chunks/app/(user)/detail/[id]/page.js"
-    ],
-    "/(user)/invoice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(user)/invoice/page.js"
     ]
   }
 }
